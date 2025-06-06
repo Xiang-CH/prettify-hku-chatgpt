@@ -66,9 +66,11 @@ function initExtension() {
   // ------------------
   // Configure new session button
   const newSessionButton = inputArea.children[1].firstChild;
-  newSessionButton.className += " new-session-button";
-  newSessionButton.style.display = "block";
-  newSessionButton.title = "Clear Session";
+  if (newSessionButton) {
+    newSessionButton.className += " new-session-button";
+    newSessionButton.style.display = "block";
+    newSessionButton.title = "Clear Session";
+  }
 
   const sendButton = inputArea.children[1].lastChild.firstChild;
   const changeModelButton = inputArea.children[1].lastChild.lastChild;
@@ -77,8 +79,13 @@ function initExtension() {
   // Create send area for send and model change buttons
   const sendArea = document.createElement("div");
   sendArea.className = "send-area";
-  sendArea.appendChild(sendButton);
-  sendArea.appendChild(changeModelButton);
+  // Check if sendButton is a valid DOM node before appending
+  if (sendButton && sendButton instanceof Node) {
+    sendArea.appendChild(sendButton);
+    sendArea.appendChild(changeModelButton);
+  } else {
+    console.info("Send button is not a valid DOM node:", sendButton);
+  }
 
   // Create function area for new session button
   const functionArea = document.createElement("div");
@@ -200,4 +207,18 @@ function waitForSendButton() {
 }
 
 // Start the initialization process
-waitForSendButton();
+// waitForSendButton();
+if (window.location.pathname === "/home") {
+  waitForSendButton();
+} else {
+  const observer = new MutationObserver(() => {
+    if (window.location.pathname === "/home") {
+      console.log("Navigated to home page, initializing extension");
+      waitForSendButton();
+      observer.disconnect();
+    }
+  });
+  
+  // Observe changes to the URL by watching the body element
+  observer.observe(document.body, { childList: true, subtree: true });
+}

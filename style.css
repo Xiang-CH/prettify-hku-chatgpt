@@ -74,8 +74,9 @@ header > div > div > button:after{
 
 .text-area{
     position: relative !important;
-    diplay: flex !important;
+    display: flex !important;
     flex-direction: column !important;
+    justify-content: space-between !important;
     align-items: center !important;
 }
 

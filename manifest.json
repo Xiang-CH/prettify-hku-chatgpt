@@ -4,10 +4,10 @@
   "version": "1.0",
   "description": "Make HKU ChatGPT usable again!",
   "permissions": ["scripting"],
-  "host_permissions": ["https://chatgpt.hku.hk/home"],
+  "host_permissions": ["https://chatgpt.hku.hk/*"],
   "content_scripts": [
     {
-      "matches": ["https://chatgpt.hku.hk/home"],
+      "matches": ["https://chatgpt.hku.hk/*"],
       "js": ["content.js"],
       "css": ["style.css"]
     }

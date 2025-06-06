@@ -13,5 +13,5 @@ This browser extension is designed to prettify the HKU ChatGPT interface, making
 - [ ] Dark mode
 - [ ] Better UI for Thinking tokens
 - [ ] Better scrolling behaviors
-- [ ] Override the ctrl-enter to send behavior (which not work on mac)
+- [ ] Override the ctrl-enter to send behavior
 * PRs are welcome!
