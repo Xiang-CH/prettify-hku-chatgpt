@@ -1,0 +1,157 @@
+
+#root > div{
+    height: 100vh !important;
+    max-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    align-items: center !important;
+    --bg-color: rgb(249, 249, 249);
+}
+
+#root > div > div:first-child{
+    height: fit-content !important;
+}
+
+header > div{
+    height: fit-content !important;
+    padding: 0.5rem 1rem 0rem 1rem!important;
+    width: 100vw !important;
+    background-color: var(--bg-color) !important;
+}
+
+[href="/"] > img{
+    width: 12rem !important;
+    margin-top: 0.5rem !important;
+}
+
+.header_container{
+    min-height: 0 !important;
+}
+
+header > div > div > button{
+    font-size: 0px !important;
+    padding: 0.5rem !important;
+    background-color: transparent !important;
+    min-width: 0 !important;
+    box-shadow: none !important;
+}
+
+header > div > div > button > span{
+    display: none !important;
+}
+
+header > div > div > button:after{
+    content: "⚙";
+    color: black !important;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+// main
+
+.MuiGrid-container{
+    border: none !important;
+}
+.MuiGrid-root{
+    border: none !important;
+}
+
+.input-area{
+    background: transparent !important;
+    height: fit-content !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.input-area > div:first-child{
+    height: fit-content !important;
+    width: 100% !important;
+}
+
+
+
+.text-area{
+    position: relative !important;
+    diplay: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.send-area{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+}
+
+
+.send-area{
+    width: 8.5rem !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    margin: 0rem 0.5rem 0.5rem 0.5rem !important;
+}
+
+@media (max-width: 769px) {
+    .send-area{
+        width: 7.8rem !important;
+    }
+}
+
+.input-area-bottom-row{
+    display: flex !important;
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+[title="Clear Session"] > button > div > p{
+    display: none !important;
+}
+
+[title="Clear Session"]{
+    width: fit-content !important;
+    padding: 0 !important;
+    margin: 0 1rem !important;
+}
+
+[title="Clear Session"] > button{
+    font-size: 0px !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    min-width: 0 !important;
+    box-shadow: none !important;
+}
+
+[title="Clear Session"] > button > div{
+    height: fit-content !important;
+}
+
+[transmission="receiver"]{
+    --Paper-shadow: none !important;
+    transition: none !important;
+}
+
+[transmission="receiver"] > div > div{
+    background-color: transparent !important;
+}
+
+.chat-functionbar{
+    backdrop-filter: none !important;
+}
+
+.meta-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent !important;
+    font-size: 0.75rem !important;
+}
+
+.meta-line > div{
+    background-color: transparent !important;
+    color:	#A9A9A9 !important;
+    margin-top: 0 !important;
+}
