@@ -3,7 +3,6 @@
   "name": "Prettify HKU ChatGPT",
   "version": "1.0",
   "description": "Make HKU ChatGPT usable again!",
-  "permissions": ["scripting"],
   "host_permissions": ["https://chatgpt.hku.hk/*"],
   "content_scripts": [
     {
